@@ -1009,7 +1009,7 @@ function initAuthScreen(){
       if(pass !== passConEl.value){ showError("Passwords don't match"); return; }
     }
     setLoading(true);
-    const p = isSignUp ? Sync.signUp(email, pass) : Sync.signIn(email, pass);
+    const p = Sync.signIn(email, pass);
     p.catch(e=>{ setLoading(false); showError(e.message); });
   };
 
