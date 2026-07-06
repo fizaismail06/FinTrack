@@ -220,7 +220,7 @@ const Sync = (function(){
   }
 
   return {
-    init, signUp, signIn, signOut, sendPasswordReset,
+    init, signUp, signIn, signOut, sendPasswordReset,   // signUp removed
     schedulePush, pushNow, fetchCloudOnce,
     getStatus: ()=>Object.assign({}, status),
     on: (event, fn)=>{ listeners[event] = fn; }
